@@ -1,0 +1,710 @@
+/* Custom CSS for Elegant Makeup Artist Website */
+
+:root {
+    --primary-color: #d63384;
+    --secondary-color: #6f42c1;
+    --accent-color: #fd7e14;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --soft-gray: #6c757d;
+    --warm-white: #fdfdfd;
+    --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;
+    color: var(--dark-color);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+.navbar-brand {
+    font-size: 1.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Language Toggle */
+.language-toggle .btn {
+    border-radius: 20px;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.language-toggle .btn:hover {
+    background: var(--gradient);
+    border-color: transparent;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('images/hero.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    animation: fadeInUp 1s ease-out;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+.hero-tagline {
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-cta {
+    background: var(--gradient);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(214, 51, 132, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Titles */
+.section-title {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+/* Carousel Styles */
+.carousel-image {
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.carousel-content {
+    padding: 2rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-indicators button {
+    background-color: var(--primary-color);
+}
+
+/* Makeup Cards */
+.makeup-card {
+    background: var(--warm-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.makeup-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Vertical Service Card Layout */
+.service-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.makeup-card:hover .service-image {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.service-title {
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.3rem;
+}
+
+.service-description {
+    color: var(--soft-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Card Accordion Styles */
+.card-accordion {
+    margin-bottom: 1.5rem;
+}
+
+.card-accordion .accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.card-accordion .accordion-button {
+    background: #f8f9fa;
+    border: none;
+    font-weight: 500;
+    color: var(--dark-color);
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+}
+
+.card-accordion .accordion-button:not(.collapsed) {
+    background: var(--gradient);
+    color: white;
+}
+
+.card-accordion .accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.card-accordion .accordion-body {
+    padding: 1rem;
+    background: var(--warm-white);
+    color: var(--soft-gray);
+}
+
+.service-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.features-title {
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.service-features li {
+    padding: 0.2rem 0;
+    color: var(--soft-gray);
+    font-size: 0.85rem;
+}
+
+.service-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design for Service Cards */
+@media (max-width: 768px) {
+    .service-image-container {
+        height: 200px;
+    }
+    
+    .service-content {
+        padding: 1rem;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+    }
+    
+    .service-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-buttons .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-image-container {
+        height: 180px;
+    }
+    
+    .service-content {
+        padding: 0.8rem;
+    }
+    
+    .service-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Buttons */
+.btn-primary {
+    background: var(--gradient);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
+    background: var(--gradient);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--gradient);
+    border: 2px solid transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(214, 51, 132, 0.4);
+}
+
+/* FAQ Accordion */
+.accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 10px !important;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.accordion-button {
+    background: linear-gradient(135deg, var(--warm-white), #f8f9fa);
+    border: none;
+    font-weight: 600;
+    color: var(--dark-color);
+    padding: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--gradient);
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.accordion-button::after {
+    background-image: none;
+    content: '\F282';
+    font-family: 'bootstrap-icons';
+    font-size: 1.2rem;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: '\F279';
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    background: var(--warm-white);
+    color: var(--soft-gray);
+}
+
+/* Services Accordion Specific Styles */
+#servicesAccordion .accordion-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#servicesAccordion .service-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+#servicesAccordion .accordion-body img {
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Vertical Service Card Layout */
+.service-card {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.service-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.service-title {
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 1.5rem;
+}
+
+.service-description {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.service-price {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.features-title {
+    color: var(--dark-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.service-features li {
+    padding: 0.3rem 0;
+    color: #6c757d;
+}
+
+.service-buttons {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Responsive Design for Service Cards */
+@media (max-width: 768px) {
+    .service-image-container {
+        height: 200px;
+    }
+    
+    .service-content {
+        padding: 1rem;
+    }
+    
+    .service-title {
+        font-size: 1.3rem;
+    }
+    
+    .service-price {
+        font-size: 1.2rem;
+    }
+    
+    .service-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-buttons .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    #servicesAccordion .accordion-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .accordion-button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    
+    .service-image-container {
+        height: 180px;
+    }
+    
+    .service-content {
+        padding: 0.8rem;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e) !important;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-content {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .carousel-image {
+        height: 250px;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-section {
+        background-attachment: scroll;
+    }
+    
+    .makeup-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-cta {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .carousel-image {
+        height: 200px;
+    }
+    
+    .makeup-card img {
+        height: 200px;
+    }
+}
+
+/* Loading Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Utility Classes */
+.bg-gradient-primary {
+    background: var(--gradient);
+}
+
+.text-gradient {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-lg-custom {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Special Effects */
+.sparkle {
+    position: relative;
+}
+
+.sparkle::before {
+    content: '✨';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 1.2rem;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
